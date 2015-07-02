@@ -13,6 +13,7 @@ Table of Contents
   3. Map
   4. Forcetouch (Show Button)
   5. Pages
+  6. Notification
 
 Let's try. :D
 

@@ -286,7 +286,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                        <label alignment="left" text="Notification Label" id="XkS-y5-khE"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
@@ -300,7 +300,11 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController">
+                    <items>
+                        <label alignment="center" text="Please check your transaction" textAlignment="center" numberOfLines="2" id="2ZC-y1-3ai"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="363" y="1119"/>
         </scene>

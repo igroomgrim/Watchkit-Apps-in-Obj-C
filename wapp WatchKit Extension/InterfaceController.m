@@ -32,6 +32,13 @@
     [super didDeactivate];
 }
 
+#pragma mark - Receive Notification Action
+- (void)handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)remoteNotification {
+    if ([identifier isEqualToString:@"checkButtonAction"]) {
+        NSLog(@"Check Button : Tapped");
+    }
+}
+
 @end
 
 
