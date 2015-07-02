@@ -12,6 +12,7 @@ Table of Contents
   2. UI
   3. Map
   4. Forcetouch (Show Button)
+  5. Pages
 
 Let's try. :D
 

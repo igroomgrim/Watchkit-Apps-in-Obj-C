@@ -30,6 +30,11 @@
                                 <segue destination="ATX-l7-Jdy" kind="push" id="lPe-ob-tES"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Pages" id="xjE-dJ-6D9">
+                            <connections>
+                                <segue destination="QCf-Cp-jNb" kind="modal" id="FRb-M5-iWv"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -76,7 +81,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="427" y="-64"/>
+            <point key="canvasLocation" x="399" y="-279"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="zXt-Vh-JZu">
@@ -106,7 +111,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="427" y="184"/>
+            <point key="canvasLocation" x="399" y="-51"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="r7V-Ur-6fu">
@@ -117,7 +122,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="427" y="428"/>
+            <point key="canvasLocation" x="399" y="179"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="tqC-8z-ysX">
@@ -136,7 +141,68 @@
                     </menu>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="427" y="723"/>
+            <point key="canvasLocation" x="399" y="392"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="t3a-s4-RN4">
+            <objects>
+                <controller id="QCf-Cp-jNb">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="ONE" id="1Z4-SZ-bYy">
+                            <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="pNK-An-MZ6" kind="relationship" relationship="nextPage" id="itZ-LU-vXw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="674"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="2iw-pv-kQR">
+            <objects>
+                <controller id="pNK-An-MZ6">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="TWO" id="blR-cp-Egn">
+                            <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="G2U-4H-E9g" kind="relationship" relationship="nextPage" id="pdo-UU-TNS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="607" y="674"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Ou6-oR-plg">
+            <objects>
+                <controller id="G2U-4H-E9g">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="THREE" id="t4p-Ki-feZ">
+                            <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="e0N-sg-pV3" kind="relationship" relationship="nextPage" id="YAh-NR-uA5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="812" y="674"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="i8g-s6-Lgl">
+            <objects>
+                <controller id="e0N-sg-pV3">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="FOUR" id="Tzx-pw-V33">
+                            <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1025" y="674"/>
         </scene>
         <!--RecordDetailInterfaceController-->
         <scene sceneID="NGz-XQ-Phz">
@@ -200,7 +266,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="641" y="-64"/>
+            <point key="canvasLocation" x="571" y="-279"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
