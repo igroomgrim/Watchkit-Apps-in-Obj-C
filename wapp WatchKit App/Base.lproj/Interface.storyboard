@@ -1,21 +1,211 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Table" id="7vZ-8W-idJ">
+                            <connections>
+                                <segue destination="EYk-fi-Ppj" kind="push" id="Pll-wV-eGK"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="UI" id="3u0-9d-whq">
+                            <connections>
+                                <segue destination="kSo-O6-ST3" kind="push" id="fED-c2-L76"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Map" id="HOA-QH-Alk">
+                            <connections>
+                                <segue destination="raD-hL-jxu" kind="push" id="dZH-SU-xnT"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Menu" id="zk5-Xn-7S4">
+                            <connections>
+                                <segue destination="ATX-l7-Jdy" kind="push" id="lPe-ob-tES"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="45" y="302.5"/>
+        </scene>
+        <!--Table View Interface Controller-->
+        <scene sceneID="Bt2-gT-JKA">
+            <objects>
+                <controller id="EYk-fi-Ppj" customClass="TableViewInterfaceController">
+                    <items>
+                        <table alignment="left" id="CYz-EI-Odh">
+                            <items>
+                                <tableRow identifier="RecordRow" id="1oj-6S-jTA" customClass="RecordRow">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="A9b-1Y-d82">
+                                        <items>
+                                            <group width="1" alignment="left" id="ldV-qS-T0q">
+                                                <items>
+                                                    <label alignment="right" text="1,200" id="xje-ly-zOG"/>
+                                                    <label alignment="left" text="Income" id="NCV-hH-AX5">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="fkK-Pe-axv">
+                                                <items>
+                                                    <label alignment="right" text="Mini job" id="32U-2k-R6k">
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="descriptionLabel" destination="32U-2k-R6k" id="eME-e6-wvF"/>
+                                        <outlet property="statusLabel" destination="NCV-hH-AX5" id="z4G-TB-NDt"/>
+                                        <outlet property="totalLabel" destination="xje-ly-zOG" id="0zh-8F-pfy"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="CYz-EI-Odh" id="WNu-V2-90h"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="-64"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="zXt-Vh-JZu">
+            <objects>
+                <controller id="kSo-O6-ST3" customClass="UIInterfaceController">
+                    <items>
+                        <group alignment="center" radius="23" id="fb9-Bd-ORC">
+                            <items>
+                                <imageView width="46" height="46" alignment="center" image="sample_user" id="AhL-zD-H8m"/>
+                            </items>
+                        </group>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="Rlh-Jg-zUp">
+                            <connections>
+                                <action selector="switchChange:" destination="kSo-O6-ST3" id="ico-NZ-d57"/>
+                            </connections>
+                        </switch>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="1H9-ex-BKQ">
+                            <connections>
+                                <action selector="sliderChange:" destination="kSo-O6-ST3" id="Sbc-6R-034"/>
+                            </connections>
+                        </slider>
+                        <dateLabel alignment="center" id="igS-sG-kVt">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="center" textAlignment="center" id="D0S-lz-9wn"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="184"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="r7V-Ur-6fu">
+            <objects>
+                <controller id="raD-hL-jxu">
+                    <items>
+                        <map height="100" alignment="center" verticalAlignment="center" id="jlt-KN-oTV"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="428"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="tqC-8z-ysX">
+            <objects>
+                <controller id="ATX-l7-Jdy">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="FORCE TOUCH" id="pra-ri-yRB"/>
+                    </items>
+                    <menu key="menu" id="j8b-69-NVA">
+                        <items>
+                            <menuItem title="Menu A" icon="accept" id="ZYX-1O-rmv"/>
+                            <menuItem title="Menu B" icon="add" id="7uj-b5-d81"/>
+                            <menuItem title="Menu C" icon="block" id="F7P-m0-Zp1"/>
+                            <menuItem title="Menu D" icon="decline" id="MP2-tM-xNY"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="723"/>
+        </scene>
+        <!--RecordDetailInterfaceController-->
+        <scene sceneID="NGz-XQ-Phz">
+            <objects>
+                <controller identifier="RecordDetailInterfaceController" id="ikK-6h-dHW" customClass="RecordDetailInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="guX-Uu-UQc">
+                            <items>
+                                <label alignment="right" text="Paid" textAlignment="left" id="qvz-no-SJW">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <group width="1" alignment="left" id="YJu-3I-Vz9">
+                                    <items>
+                                        <label width="92" alignment="right" verticalAlignment="center" text="25,000" textAlignment="right" id="URQ-Qh-IHL">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="6" right="6" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="1Y3-oU-4lZ">
+                            <items>
+                                <label alignment="right" text="Date" textAlignment="left" id="X6R-Gw-qMQ">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <group width="1" alignment="left" id="wt3-HT-PzO">
+                                    <items>
+                                        <label width="92" alignment="right" verticalAlignment="center" text="15/06/2015" textAlignment="right" id="uGM-4v-gts">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="6" right="6" top="0.0" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="fSh-L4-0v3">
+                            <items>
+                                <label alignment="right" text="Description" textAlignment="left" id="6oP-zb-QsK">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <group width="1" alignment="left" id="ApN-Vw-IVC">
+                                    <items>
+                                        <label width="135" alignment="right" verticalAlignment="center" text="Buy something" textAlignment="right" numberOfLines="0" id="gY1-vU-2Cq">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="6" right="6" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="uGM-4v-gts" id="7NE-wd-BF3"/>
+                        <outlet property="descriptionLabel" destination="gY1-vU-2Cq" id="W6n-OU-nJ8"/>
+                        <outlet property="statusLabel" destination="qvz-no-SJW" id="Gve-Af-WiC"/>
+                        <outlet property="totalLabel" destination="URQ-Qh-IHL" id="G18-SJ-37g"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="641" y="-64"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
@@ -23,7 +213,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="45" y="826"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -39,14 +229,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="45" y="1119"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="363" y="1119"/>
         </scene>
     </scenes>
 </document>
