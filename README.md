@@ -10,7 +10,7 @@ Table of Contents
 
   1. Tableview
   2. UI
-  3. Map
+  3. Map(Inprogress)
   4. Forcetouch (Show Button)
   5. Pages
   6. Notification
